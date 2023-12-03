@@ -3,6 +3,7 @@ name = "gearhead"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
+axum = "0.7.1"
+minijinja = "1.0.10"
+sqlite = "0.32.0"
