@@ -8,7 +8,7 @@ use axum::{
 };
 use axum_template::{engine::Engine, Key, RenderHtml};
 use minijinja::Environment;
-use serde::{Serializei, Deserialize};
+use serde::Serialize;
 use tokio::net::TcpListener;
 type AppEngine = Engine<Environment<'static>>;
 #[derive(Debug, Serialize)]
@@ -16,9 +16,7 @@ pub struct Person {
     name: String,
 }
 async fn get_name(
-    // Obtain the engine
     engine: AppEngine,
-    // Extract the key
     Key(key): Key,
     Path(name): Path<String>,
 ) -> impl IntoResponse {
