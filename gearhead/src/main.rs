@@ -42,8 +42,6 @@ async fn main() {
             engine: Engine::from(jinja),
         });
 
-    println!("See example: http://127.0.0.1:8080/example");
-
     let listener = TcpListener::bind((Ipv4Addr::LOCALHOST, 1118))
         .await
         .unwrap();
